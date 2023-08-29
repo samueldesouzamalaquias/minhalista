@@ -4,33 +4,40 @@
     <head>
          <title>Lista do Samu</title>
          <style>
+             .apresentação {
+                font-weight: bold;
+             }
             .adicionar {
                 background-color: green;
                 width: 150px;
                 height: 50px;
                 font-size: 18px;
+                font-weight: bold;
             }
             .remover {
                 background-color: red;
                 width: 150px;
                 height: 50px;
                 font-size: 18px;
+                font-weight: bold;
             }
             .mostrar {
                 width: 150px;
                 height: 50px;
                 font-size: 18px;
+                font-weight: bold;
             }
             .salvar {
                 width: 150px;
                 height: 50px;
                 font-size: 18px;
+                font-weight: bold;
             }
          
          </style>
     </head>
     <body>
-        <p>Vamos criar uma lista</p>
+        <p class="apresentação">Crie uma lista</p>
         <button class="adicionar" onclick="
             while (true) { // Infinite loop until the user clicks Cancel
             let item = prompt('Digite um item ou clique em Cancelar para sair:');
