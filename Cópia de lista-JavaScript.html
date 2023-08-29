@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+         <title> </title>
+         <style>
+            .adicionar {
+                background-color: green;
+                width: 150px;
+                height: 50px;
+                font-size: 18px;
+            }
+            .remover {
+                background-color: red;
+                width: 150px;
+                height: 50px;
+                font-size: 18px;
+            }
+            .mostrar {
+                width: 150px;
+                height: 50px;
+                font-size: 18px;
+            }
+            .salvar {
+                width: 150px;
+                height: 50px;
+                font-size: 18px;
+            }
+         
+         </style>
+    </head>
+    <body>
+        <button class="adicionar" onclick="
+        while (true) { // Infinite loop until the user clicks Cancel
+        let item = prompt('Digite um item ou clique em Cancelar para sair:');
+        if (item === null) {
+            break; // Exit the loop if the user clicks Cancel
+        }
+        lista.push(item); // Add the item to the array
+        }
+        if (lista.length > 0) {
+        alert('Itens adicionados: ' + lista.join(', '));
+        } else {
+        alert('Nenhum item foi adicionado.');
+        }
+">Adicionar</button>
+
+        <button class="mostrar" onclick = "
+            alert(lista);
+        ">Mostrar
+        </button>
+            
+        <button class="remover" onclick = "
+            let remover = prompt('Remover: ');
+            //let indice = lista.indexOf(remover);
+            //lista.splice(indice, 1);
+            lista = lista.filter(item => item != remover);
+            alert(lista);
+        ">Remover    
+        </button>
+        <button class="salvar" onclick="
+            localStorage.setItem('lista', JSON.stringify(lista));
+            alert('Salvo com sucesso.')
+        "
+            >Salvar
+        </button>
+        
+        <script>
+            let lista = JSON.parse(localStorage.getItem('lista'))
+            if (lista === null) {
+                lista = [];
+            }
+        </script>
+    </body>
+ </html>
