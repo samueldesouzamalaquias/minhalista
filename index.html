@@ -32,23 +32,23 @@
     <body>
         <p>Vamos criar uma lista</p>
         <button class="adicionar" onclick="
-        while (true) { // Infinite loop until the user clicks Cancel
-        let item = prompt('Digite um item ou clique em Cancelar para sair:');
-        if (item === null) {
-            break; // Exit the loop if the user clicks Cancel
-        }
-        lista.push(item); // Add the item to the array
-        }
-        if (lista.length > 0) {
-        alert('Itens adicionados: ' + lista.join(', '));
-        } else {
-        alert('Nenhum item foi adicionado.');
-        }
-">Adicionar</button>
+            while (true) { // Infinite loop until the user clicks Cancel
+            let item = prompt('Digite um item ou clique em Cancelar para sair:');
+            if (item === null) {
+                break; // Exit the loop if the user clicks Cancel
+            }
+            lista.push(item); // Add the item to the array
+            }
+            if (lista.length > 0) {
+            alert('Itens adicionados: ' + lista.join(', '));
+            } else {
+            alert('Nenhum item foi adicionado.');
+            }
+            ">Adicionar</button>
 
         <button class="mostrar" onclick = "
             alert(lista);
-        ">Mostrar
+            ">Mostrar
         </button>
             
         <button class="remover" onclick = "
@@ -57,12 +57,12 @@
             //lista.splice(indice, 1);
             lista = lista.filter(item => item != remover);
             alert(lista);
-        ">Remover    
+            ">Remover    
         </button>
         <button class="salvar" onclick="
             localStorage.setItem('lista', JSON.stringify(lista));
             alert('Salvo com sucesso.')
-        "
+            "
             >Salvar
         </button>
         
